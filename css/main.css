@@ -40,9 +40,12 @@ span {
   line-height: 112%;
   letter-spacing: -1px; }
 
+a {
+  color: #fffef9; }
+
 .container {
   width: 100%;
-  max-width: calc(119rem + 1.5rem);
+  max-width: calc(104.6rem + 1.5rem);
   padding: 0 1.5rem;
   margin: 0 auto; }
 
@@ -90,3 +93,36 @@ h3 {
 
 .p3 {
   font-size: 1.2rem; }
+
+header {
+  background-color: #08070c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex; }
+  header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3.6rem 0;
+      gap: 4rem; }
+      header nav ul li:last-child {
+        margin-right: 4rem; }
+    header nav .header-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.6rem; }
