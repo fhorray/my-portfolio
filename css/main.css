@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 150%; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+html,
+body {
+  overflow-x: hidden; }
+
+button {
+  background-color: transparent;
+  cursor: pointer; }
+
+a {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 150%; }
+
+span {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 112%;
+  letter-spacing: -1px; }
+
+.container {
+  width: 100%;
+  max-width: calc(119rem + 1.5rem);
+  padding: 0 1.5rem;
+  margin: 0 auto; }
