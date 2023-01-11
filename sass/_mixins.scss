@@ -1,6 +1,34 @@
+// Flex
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+// Section borer
+@mixin sectionBefore {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: $brand-color-purple;
+    display: block;
+    transform: rotate(-4.29deg);
+    margin-bottom: 12rem;
+  }
+}
+
+@mixin sectionAfter {
+  &::after {
+    content: "";
+    width: 100%;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: $brand-color-purple;
+    display: block;
+    transform: rotate(-4.29deg);
+    margin-bottom: 12rem;
+  }
 }

@@ -1,0 +1,407 @@
+.s-hero {
+  padding-top: 10.7rem;
+  color: #fff;
+  position: relative;
+  margin-bottom: 7rem;
+
+  .container {
+    @include flex(row, space-between, center);
+  }
+
+  .text {
+    width: 100%;
+    max-width: 57.8rem;
+
+    h2 {
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $brand-color-light-bg;
+      margin-bottom: 1.8rem;
+      span {
+        font-weight: 400;
+        font-size: 3.5rem;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        color: $brand-color-purple;
+      }
+      .interm {
+        font-weight: 300;
+        font-size: 5.8rem;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        position: relative;
+        top: 0.8rem;
+        color: $brand-color-light-bg;
+      }
+    }
+    h1,
+    p,
+    ul {
+      padding-left: 5.3rem;
+      margin-bottom: 1.8rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 6rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $brand-color-purple;
+    }
+
+    ul {
+      @include flex(row, start, center);
+      gap: 3.5rem;
+    }
+  }
+
+  .hero-img {
+    z-index: 2;
+    background-color: transparent;
+  }
+
+  .dt1 {
+    top: 6.8rem;
+  }
+  .dt2 {
+    top: 30.8rem;
+    z-index: 3;
+  }
+  .dt3 {
+    bottom: -14.6rem;
+  }
+}
+
+.s-skills {
+  margin-bottom: 13.2rem;
+
+  .container {
+    @include flex(column, center, center);
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light-bg;
+    margin-bottom: 2rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      color: $brand-color-purple;
+      opacity: 1;
+      font-family: "Sora";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: "/>";
+    }
+  }
+
+  ul {
+    @include flex(row, center, center);
+    gap: 5.5rem;
+    margin-bottom: 6rem;
+  }
+
+  .arrow-down {
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    img:nth-child(2) {
+      opacity: 0.3;
+    }
+    img:nth-child(3) {
+      opacity: 0.1;
+    }
+  }
+
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -3.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    right: 42px;
+  }
+
+  &::after {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    left: 27rem;
+  }
+}
+
+.s-about {
+  color: $brand-color-light-bg;
+  padding-top: 6rem;
+
+  .container {
+    position: relative;
+  }
+  .text {
+    h2 {
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $brand-color-light-bg;
+      margin-bottom: 2.5rem;
+      span {
+        font-weight: 400;
+        font-size: 3.5rem;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        color: $brand-color-purple;
+      }
+    }
+    p {
+      width: 100%;
+      max-width: 58.8rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+      margin-left: 5.3rem;
+    }
+  }
+  .dt-sobre {
+    position: absolute;
+    bottom: 10rem;
+    right: -2rem;
+  }
+
+  @include sectionBefore;
+}
+
+.s-projects {
+  padding-top: 8.5rem;
+  margin-bottom: 3.2rem;
+
+  .container {
+    position: relative;
+  }
+
+  .dt-projects {
+    position: absolute;
+    top: -8rem;
+    right: -2rem;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light-bg;
+    margin: 2.5rem 0;
+    span {
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $brand-color-purple;
+    }
+  }
+
+  .projects {
+    .items-container {
+      display: flex;
+      gap: 6rem;
+      flex-wrap: wrap;
+      margin-left: 5.5rem;
+
+      .item {
+        width: 28.5rem;
+        height: 30.8rem;
+        background-color: #ccc;
+      }
+    }
+  }
+
+  @include sectionBefore;
+}
+
+.s-certificates {
+  @include sectionBefore;
+
+  padding-top: 8.5rem;
+  margin-bottom: 3.2rem;
+
+  .container {
+    position: relative;
+  }
+
+  .dt-certificates {
+    position: absolute;
+    top: -6rem;
+    right: -2rem;
+    font-size: 12rem;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light-bg;
+    margin: 2.5rem 0;
+    span {
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $brand-color-purple;
+    }
+  }
+
+  ul {
+    @include flex(row, space-between, center);
+    gap: 4.3rem;
+    padding: 6.3rem 2rem;
+  }
+
+  @include sectionAfter;
+}
+
+footer {
+  padding-top: 5.8rem;
+  width: 100%;
+  position: relative;
+
+  .container {
+    @include flex(column, center, center);
+    gap: 2rem;
+    color: $brand-color-light-bg;
+    font-family: "Sora";
+    font-style: normal;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light-bg;
+    margin-bottom: 5rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      color: $brand-color-purple;
+      opacity: 1;
+      font-family: "Sora";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: "/>";
+    }
+  }
+
+  .city {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: rgba($grey-400, 0.5);
+    z-index: 10;
+  }
+
+  .email {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-purple;
+    z-index: 10;
+  }
+
+  .phone {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    z-index: 10;
+  }
+
+  ul {
+    @include flex(row, space-between, center);
+    gap: 3.5rem;
+    z-index: 10;
+  }
+
+  .copy {
+    padding: 9rem;
+    z-index: 10;
+    a {
+      color: $brand-color-purple;
+      font-weight: 700;
+    }
+  }
+
+  &::after {
+    content: "";
+    background: url("../img/footer-after.svg") no-repeat;
+    display: block;
+    width: 100%;
+    height: 41.8rem;
+    position: absolute;
+    right: -96rem;
+    bottom: 0;
+  }
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-0.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    bottom: 17rem;
+    left: -13rem;
+  }
+}

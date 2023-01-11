@@ -1,10 +1,13 @@
 header {
-  background-color: $brand-color-bg;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
+  z-index: 999;
+  background: rgba($brand-color-bg, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 
   .container {
     @include flex(row, space-between, center);
@@ -14,9 +17,47 @@ header {
     ul {
       @include flex(row, space-between, center);
       padding: 3.6rem 0;
-      gap: 4rem;
-      li:last-child {
-        margin-right: 4rem;
+
+      li {
+        a {
+          padding: 1rem 0;
+          // Menu Styles
+          &::before,
+          &::after {
+            width: 1rem;
+            height: 1rem;
+            margin: 0 0.5rem;
+            color: $brand-color-purple;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 120%;
+            transition: all 0.3s ease-in;
+            position: relative;
+            opacity: 0;
+          }
+          &::before {
+            content: "<";
+            left: -1rem;
+          }
+          &::after {
+            content: "/>";
+            left: 1rem;
+          }
+          &:hover::before {
+            opacity: 1;
+            left: 0rem;
+          }
+          &:hover::after {
+            opacity: 1;
+            left: 0rem;
+          }
+        }
+
+        &:last-child {
+          margin-right: 4rem;
+        }
       }
     }
 

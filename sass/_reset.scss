@@ -26,6 +26,7 @@ img {
 html,
 body {
   overflow-x: hidden;
+  background-color: $brand-color-bg;
 }
 
 button {
@@ -40,13 +41,37 @@ a {
 }
 
 span {
-  font-family: "Poppins";
-  font-weight: 700;
-  font-size: 4rem;
-  line-height: 112%;
-  letter-spacing: -1px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: $brand-color-light-bg;
 }
 
 a {
   color: $brand-color-light-bg;
+}
+
+// Scrollbar styles
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #22202c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $brand-color-purple;
+  border-radius: 50rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #22202c;
 }
