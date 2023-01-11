@@ -36,6 +36,7 @@
         position: relative;
         top: 0.8rem;
         color: $brand-color-light-bg;
+        animation: intermAnimation 0.9s infinite ease-in-out;
       }
     }
     h1,
@@ -78,6 +79,11 @@
   .dt3 {
     bottom: -14.6rem;
     opacity: 0.05;
+  }
+
+  &::before,
+  &::after {
+    pointer-events: none;
   }
 
   &::before {
