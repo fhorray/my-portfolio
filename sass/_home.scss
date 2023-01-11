@@ -79,11 +79,39 @@
     bottom: -14.6rem;
     opacity: 0.05;
   }
+
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -3.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    right: 42px;
+    z-index: 2000;
+  }
+
+  &::after {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    left: 27rem;
+    z-index: 2000;
+  }
 }
 
 .s-skills {
-  margin-bottom: 13.2rem;
-
   .container {
     @include flex(column, center, center);
   }
@@ -150,36 +178,6 @@
       animation-fill-mode: backwards;
     }
   }
-
-  &::before {
-    content: "";
-    background-color: $brand-color-purple;
-    width: 83.5rem;
-    height: 0.05rem;
-    opacity: 0.3;
-    background-color: #9245f5;
-    display: block;
-    transform: matrix(-3.93, -3.4, 0.37, -0.92, 0, 0);
-    position: absolute;
-    top: 110px;
-    right: 42px;
-    z-index: 122;
-  }
-
-  &::after {
-    content: "";
-    background-color: $brand-color-purple;
-    width: 83.5rem;
-    height: 0.05rem;
-    opacity: 0.3;
-    background-color: #9245f5;
-    display: block;
-    transform: matrix(-3.93, -0.4, 0.37, -0.92, 0, 0);
-    position: absolute;
-    top: 110px;
-    left: 27rem;
-    z-index: 122;
-  }
 }
 
 .s-about {
@@ -190,21 +188,6 @@
     position: relative;
   }
   .text {
-    h2 {
-      font-weight: 400;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: $brand-color-light-bg;
-      margin-bottom: 2.5rem;
-      span {
-        font-weight: 400;
-        font-size: 3.5rem;
-        line-height: 120%;
-        letter-spacing: -0.02em;
-        color: $brand-color-purple;
-      }
-    }
     p {
       width: 100%;
       max-width: 58.8rem;
@@ -243,34 +226,12 @@
     opacity: 0.15;
   }
 
-  h2 {
-    font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    color: $brand-color-light-bg;
-    margin: 2.5rem 0;
-    span {
-      font-weight: 400;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: $brand-color-purple;
-    }
-  }
-
   .projects {
     .items-container {
       display: flex;
       gap: 6rem;
       flex-wrap: wrap;
       margin-left: 5.5rem;
-
-      .item {
-        width: 28.5rem;
-        height: 30.8rem;
-        background-color: #ccc;
-      }
     }
   }
 
@@ -295,26 +256,18 @@
     opacity: 0.15;
   }
 
-  h2 {
-    font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    color: $brand-color-light-bg;
-    margin: 2.5rem 0;
-    span {
-      font-weight: 400;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: $brand-color-purple;
-    }
-  }
-
   ul {
     @include flex(row, space-between, center);
     gap: 4.3rem;
     padding: 6.3rem 2rem;
+    li {
+      button {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
   }
 
   @include sectionAfter;

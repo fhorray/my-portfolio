@@ -143,6 +143,20 @@ h3 {
 .p3 {
   font-size: 1.2rem; }
 
+h2 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #fffef9;
+  margin-bottom: 2.5rem; }
+  h2 span {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #9245f5; }
+
 .detail {
   position: absolute;
   background-color: transparent;
@@ -157,6 +171,61 @@ h3 {
   letter-spacing: -0.02em;
   user-select: none;
   white-space: nowrap; }
+
+.s-projects .projects .items-container .item {
+  position: relative;
+  width: 28.5rem;
+  height: 30.8rem;
+  overflow: hidden;
+  cursor: pointer; }
+  .s-projects .projects .items-container .item .overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    background-color: rgba(146, 69, 245, 0.95); }
+    .s-projects .projects .items-container .item .overlay-content ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 3rem;
+      position: relative;
+      top: -8.4rem;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0.2s; }
+      .s-projects .projects .items-container .item .overlay-content ul li img {
+        max-width: 4.2rem; }
+    .s-projects .projects .items-container .item .overlay-content a {
+      padding: 1.5rem 6rem;
+      background-color: #fffef9;
+      color: #9245f5;
+      font-family: "Sora";
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      position: relative;
+      bottom: -3.4rem;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0.3s; }
+  .s-projects .projects .items-container .item:hover .overlay-content {
+    opacity: 1; }
+    .s-projects .projects .items-container .item:hover .overlay-content ul {
+      top: 0;
+      opacity: 1; }
+    .s-projects .projects .items-container .item:hover .overlay-content a {
+      bottom: 0;
+      opacity: 1; }
 
 header {
   position: fixed;
@@ -288,74 +357,7 @@ header {
   .s-hero .dt3 {
     bottom: -14.6rem;
     opacity: 0.05; }
-
-.s-skills {
-  margin-bottom: 13.2rem; }
-  .s-skills .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .s-skills h2 {
-    font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    color: #fffef9;
-    margin-bottom: 5rem; }
-    .s-skills h2::before, .s-skills h2::after {
-      width: 2rem;
-      height: 2rem;
-      margin: 0 0.5rem;
-      color: #9245f5;
-      opacity: 1;
-      font-family: "Sora";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em; }
-    .s-skills h2::before {
-      content: "<"; }
-    .s-skills h2::after {
-      content: "/>"; }
-  .s-skills ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5.5rem;
-    margin-bottom: 4rem; }
-    .s-skills ul li {
-      cursor: pointer; }
-      .s-skills ul li .baladAnimation {
-        transition: all 0.3s ease-in; }
-        .s-skills ul li .baladAnimation:hover {
-          animation: baladOne 0.6s infinite ease-in-out;
-          animation-delay: 0.2s;
-          animation-fill-mode: backwards;
-          animation-direction: alternate, reverse, normal;
-          transform: scale(1.03);
-          transform: translateY(-0.5rem); }
-  .s-skills .arrow-down {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem; }
-    .s-skills .arrow-down img:nth-child(1) {
-      animation: downOpacity 2s infinite ease-in-out;
-      animation-delay: 0.3s;
-      animation-fill-mode: backwards; }
-    .s-skills .arrow-down img:nth-child(2) {
-      animation: downOpacity 2s infinite ease-in-out;
-      animation-delay: 0.6s;
-      animation-fill-mode: backwards; }
-    .s-skills .arrow-down img:nth-child(3) {
-      animation: downOpacity 2s infinite ease-in-out;
-      animation-delay: 0.9s;
-      animation-fill-mode: backwards; }
-  .s-skills::before {
+  .s-hero::before {
     content: "";
     background-color: #9245f5;
     width: 83.5rem;
@@ -367,8 +369,8 @@ header {
     position: absolute;
     top: 110px;
     right: 42px;
-    z-index: 122; }
-  .s-skills::after {
+    z-index: 2000; }
+  .s-hero::after {
     content: "";
     background-color: #9245f5;
     width: 83.5rem;
@@ -380,26 +382,81 @@ header {
     position: absolute;
     top: 110px;
     left: 27rem;
-    z-index: 122; }
+    z-index: 2000; }
+
+.s-skills .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.s-skills h2 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #fffef9;
+  margin-bottom: 5rem; }
+  .s-skills h2::before, .s-skills h2::after {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    color: #9245f5;
+    opacity: 1;
+    font-family: "Sora";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em; }
+  .s-skills h2::before {
+    content: "<"; }
+  .s-skills h2::after {
+    content: "/>"; }
+
+.s-skills ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5.5rem;
+  margin-bottom: 4rem; }
+  .s-skills ul li {
+    cursor: pointer; }
+    .s-skills ul li .baladAnimation {
+      transition: all 0.3s ease-in; }
+      .s-skills ul li .baladAnimation:hover {
+        animation: baladOne 0.6s infinite ease-in-out;
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
+        animation-direction: alternate, reverse, normal;
+        transform: scale(1.03);
+        transform: translateY(-0.2rem); }
+
+.s-skills .arrow-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; }
+  .s-skills .arrow-down img:nth-child(1) {
+    animation: downOpacity 2s infinite ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards; }
+  .s-skills .arrow-down img:nth-child(2) {
+    animation: downOpacity 2s infinite ease-in-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards; }
+  .s-skills .arrow-down img:nth-child(3) {
+    animation: downOpacity 2s infinite ease-in-out;
+    animation-delay: 0.9s;
+    animation-fill-mode: backwards; }
 
 .s-about {
   color: #fffef9;
   padding-top: 6rem; }
   .s-about .container {
     position: relative; }
-  .s-about .text h2 {
-    font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    color: #fffef9;
-    margin-bottom: 2.5rem; }
-    .s-about .text h2 span {
-      font-weight: 400;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: #9245f5; }
   .s-about .text p {
     width: 100%;
     max-width: 58.8rem;
@@ -436,28 +493,11 @@ header {
     top: -8rem;
     right: -2rem;
     opacity: 0.15; }
-  .s-projects h2 {
-    font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    color: #fffef9;
-    margin: 2.5rem 0; }
-    .s-projects h2 span {
-      font-weight: 400;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: #9245f5; }
   .s-projects .projects .items-container {
     display: flex;
     gap: 6rem;
     flex-wrap: wrap;
     margin-left: 5.5rem; }
-    .s-projects .projects .items-container .item {
-      width: 28.5rem;
-      height: 30.8rem;
-      background-color: #ccc; }
   .s-projects::before {
     content: "";
     width: 100%;
@@ -488,19 +528,6 @@ header {
     right: -2rem;
     font-size: 12rem;
     opacity: 0.15; }
-  .s-certificates h2 {
-    font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    color: #fffef9;
-    margin: 2.5rem 0; }
-    .s-certificates h2 span {
-      font-weight: 400;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: #9245f5; }
   .s-certificates ul {
     display: flex;
     flex-direction: row;
@@ -508,6 +535,10 @@ header {
     align-items: center;
     gap: 4.3rem;
     padding: 6.3rem 2rem; }
+    .s-certificates ul li button {
+      transition: all 0.3s ease-in-out; }
+      .s-certificates ul li button:hover {
+        transform: scale(1.03); }
   .s-certificates::after {
     content: "";
     width: 100%;

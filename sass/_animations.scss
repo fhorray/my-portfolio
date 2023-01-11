@@ -42,9 +42,18 @@
   }
 }
 
-// Scale Animation
-@mixin scaleAnimation {
-  &::hover {
-    transform: scale(1.4);
+// Balad Animation
+@mixin baladAnimation {
+  .baladAnimation {
+    transition: all 0.3s ease-in;
+    &:hover {
+      animation: baladOne 0.6s infinite ease-in-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: backwards;
+      animation-direction: alternate, reverse, normal;
+
+      transform: scale(1.03);
+      transform: translateY(-0.2rem);
+    }
   }
 }
