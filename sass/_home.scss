@@ -1,6 +1,6 @@
 .s-hero {
   padding-top: 10.7rem;
-  color: #fff;
+  color: $brand-color-light;
   position: relative;
   margin-bottom: 7rem;
 
@@ -19,7 +19,7 @@
       font-size: 3.5rem;
       line-height: 120%;
       letter-spacing: -0.02em;
-      color: $brand-color-light-bg;
+      color: $brand-color-light;
       margin-bottom: 1.8rem;
       span {
         font-weight: 400;
@@ -35,7 +35,7 @@
         letter-spacing: -0.02em;
         position: relative;
         top: 0.8rem;
-        color: $brand-color-light-bg;
+        color: $brand-color-light;
         animation: intermAnimation 0.9s infinite ease-in-out;
       }
     }
@@ -98,7 +98,6 @@
     position: absolute;
     top: 110px;
     right: 42px;
-    z-index: 2000;
   }
 
   &::after {
@@ -113,7 +112,6 @@
     position: absolute;
     top: 110px;
     left: 27rem;
-    z-index: 2000;
   }
 }
 
@@ -127,7 +125,7 @@
     font-size: 3.5rem;
     line-height: 120%;
     letter-spacing: -0.02em;
-    color: $brand-color-light-bg;
+    color: $brand-color-light;
     margin-bottom: 5rem;
 
     &::before,
@@ -187,7 +185,7 @@
 }
 
 .s-about {
-  color: $brand-color-light-bg;
+  color: $brand-color-light;
   padding-top: 6rem;
 
   .container {
@@ -207,6 +205,12 @@
       margin-left: 5.3rem;
     }
   }
+
+  a {
+    color: $brand-color-purple-light;
+    font-size: 2rem;
+  }
+
   .dt-sobre {
     position: absolute;
     bottom: 10rem;
@@ -287,7 +291,7 @@ footer {
   .container {
     @include flex(column, center, center);
     gap: 2rem;
-    color: $brand-color-light-bg;
+    color: $brand-color-light;
     font-family: "Sora";
     font-style: normal;
   }
@@ -297,7 +301,7 @@ footer {
     font-size: 3.5rem;
     line-height: 120%;
     letter-spacing: -0.02em;
-    color: $brand-color-light-bg;
+    color: $brand-color-light;
     margin-bottom: 5rem;
 
     &::before,
