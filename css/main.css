@@ -69,6 +69,35 @@ a {
   padding: 0 1.5rem;
   margin: 0 auto; }
 
+@keyframes downOpacity {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1; }
+  50% {
+    transform: translateY(0px);
+    opacity: 0.1; }
+  100% {
+    transform: translateY(-10px);
+    opacity: 1; } }
+
+@keyframes baladOne {
+  0% {
+    opacity: 1; }
+  15% {
+    opacity: 0.5; }
+  30% {
+    opacity: 1; }
+  40% {
+    opacity: 0.7; }
+  45% {
+    opacity: 0.8; }
+  60% {
+    opacity: 0.6; }
+  70% {
+    opacity: 0.9; }
+  100% {
+    opacity: 0.7; } }
+
 h1,
 h2,
 h3 {
@@ -118,7 +147,7 @@ h3 {
   position: absolute;
   background-color: transparent;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.15);
+  -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 0.05rem;
   font-size: 150px;
   z-index: 0;
@@ -126,7 +155,8 @@ h3 {
   font-size: 16rem;
   line-height: 120%;
   letter-spacing: -0.02em;
-  user-select: none; }
+  user-select: none;
+  white-space: nowrap; }
 
 header {
   position: fixed;
@@ -199,10 +229,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    gap: 7rem; }
   .s-hero .text {
     width: 100%;
-    max-width: 57.8rem; }
+    max-width: 57.8rem;
+    z-index: 10; }
     .s-hero .text h2 {
       font-weight: 400;
       font-size: 3.5rem;
@@ -242,15 +274,20 @@ header {
       align-items: center;
       gap: 3.5rem; }
   .s-hero .hero-img {
+    width: 100%;
+    max-width: 40rem;
     z-index: 2;
     background-color: transparent; }
   .s-hero .dt1 {
-    top: 6.8rem; }
+    top: 6.8rem;
+    opacity: 0.15; }
   .s-hero .dt2 {
     top: 30.8rem;
-    z-index: 3; }
+    z-index: 3;
+    opacity: 0.1; }
   .s-hero .dt3 {
-    bottom: -14.6rem; }
+    bottom: -14.6rem;
+    opacity: 0.05; }
 
 .s-skills {
   margin-bottom: 13.2rem; }
@@ -265,7 +302,7 @@ header {
     line-height: 120%;
     letter-spacing: -0.02em;
     color: #fffef9;
-    margin-bottom: 2rem; }
+    margin-bottom: 5rem; }
     .s-skills h2::before, .s-skills h2::after {
       width: 2rem;
       height: 2rem;
@@ -288,17 +325,36 @@ header {
     justify-content: center;
     align-items: center;
     gap: 5.5rem;
-    margin-bottom: 6rem; }
+    margin-bottom: 4rem; }
+    .s-skills ul li {
+      cursor: pointer; }
+      .s-skills ul li .baladAnimation {
+        transition: all 0.3s ease-in; }
+        .s-skills ul li .baladAnimation:hover {
+          animation: baladOne 0.6s infinite ease-in-out;
+          animation-delay: 0.2s;
+          animation-fill-mode: backwards;
+          animation-direction: alternate, reverse, normal;
+          transform: scale(1.03);
+          transform: translateY(-0.5rem); }
   .s-skills .arrow-down {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem; }
+    .s-skills .arrow-down img:nth-child(1) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.3s;
+      animation-fill-mode: backwards; }
     .s-skills .arrow-down img:nth-child(2) {
-      opacity: 0.3; }
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.6s;
+      animation-fill-mode: backwards; }
     .s-skills .arrow-down img:nth-child(3) {
-      opacity: 0.1; }
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.9s;
+      animation-fill-mode: backwards; }
   .s-skills::before {
     content: "";
     background-color: #9245f5;
@@ -310,7 +366,8 @@ header {
     transform: matrix(-3.93, -3.4, 0.37, -0.92, 0, 0);
     position: absolute;
     top: 110px;
-    right: 42px; }
+    right: 42px;
+    z-index: 122; }
   .s-skills::after {
     content: "";
     background-color: #9245f5;
@@ -322,7 +379,8 @@ header {
     transform: matrix(-3.93, -0.4, 0.37, -0.92, 0, 0);
     position: absolute;
     top: 110px;
-    left: 27rem; }
+    left: 27rem;
+    z-index: 122; }
 
 .s-about {
   color: #fffef9;
@@ -356,7 +414,8 @@ header {
   .s-about .dt-sobre {
     position: absolute;
     bottom: 10rem;
-    right: -2rem; }
+    right: -2rem;
+    opacity: 0.15; }
   .s-about::before {
     content: "";
     width: 100%;
@@ -375,7 +434,8 @@ header {
   .s-projects .dt-projects {
     position: absolute;
     top: -8rem;
-    right: -2rem; }
+    right: -2rem;
+    opacity: 0.15; }
   .s-projects h2 {
     font-weight: 400;
     font-size: 3.5rem;
@@ -426,7 +486,8 @@ header {
     position: absolute;
     top: -6rem;
     right: -2rem;
-    font-size: 12rem; }
+    font-size: 12rem;
+    opacity: 0.15; }
   .s-certificates h2 {
     font-weight: 400;
     font-size: 3.5rem;

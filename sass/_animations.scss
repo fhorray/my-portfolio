@@ -1,0 +1,50 @@
+// Arrows Down
+@keyframes downOpacity {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+// Skills Animation
+@keyframes baladOne {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  45% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+// Scale Animation
+@mixin scaleAnimation {
+  &::hover {
+    transform: scale(1.4);
+  }
+}
