@@ -23,15 +23,28 @@
 
       <nav>
         <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Baixar curriculo</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#certificates">Certificados</a></li>
+          <!-- <li><a href="#experience">Experiência</a></li> -->
         </ul>
         <div class="header-btns">
+
+          <button class="cv-download" type="button">
+            <a href="./archives/(PT-BR) Francyelson Santos Nobre - CV.docx" download="Francy CV">Baixar CV</a>
+            <img src="./img/download-i.svg" alt="Download Icon">
+          </button>
+
           <button id="language-btn"><img src="./img/globe-i.svg" alt="language"></button>
-          <button id="light-mode"><img src="./img/moon-on-i.svg" alt="Light and Dark Button"></button>
+          <button id="light-mode">
+            <img id="img-mode" src="./img/sun-i.svg" alt="Dark Button">
+          </button>
+
+          <img src="./img/menu-mobile.svg" alt="Menu Mobile Icon" class="menu-mobile">
+
         </div>
       </nav>
+
 
       <div class="lang-dropdown">
         <div class="languages">
@@ -117,7 +130,7 @@
       </ul>
 
       <a href="#about">
-        <div class="arrow-down">
+        <div href="#about" class="arrow-down">
           <img src="./img/arrow-down-i.svg" alt="Arrow Down Icon">
           <img src="./img/arrow-down-i.svg" alt="Arrow Down Icon">
           <img src="./img/arrow-down-i.svg" alt="Arrow Down Icon">
@@ -126,7 +139,7 @@
     </div>
   </section>
 
-  <section id="#about" class="s-about">
+  <section id="about" class="s-about">
     <div class="container">
 
       <div class="text">
@@ -147,12 +160,12 @@
     </div>
   </section>
 
-  <section class="s-projects">
+  <section id="projects" class="s-projects">
     <div class="container">
       <span class="detail dt-projects">Projetos</span>
 
       <div class="projects">
-        <h2><span>const</span> meusProjetos = <span>[</span></h2>
+        <h2><span>const</span> meusProjetos = <span>{</span></h2>
 
         <div class="items-container">
 
@@ -254,29 +267,30 @@
         </div>
 
         <h2>
-          <span>];</span>
+          <span>};</span>
         </h2>
       </div>
 
     </div>
   </section>
 
-  <section class="s-certificates">
+  <section id="certificates" class="s-certificates">
     <div class="container">
       <span class="detail dt-certificates">Certificados</span>
 
-      <div class="projects">
+
+      <div class="schools">
         <h2><span>const</span> meusCertificados = <span>[</span></h2>
 
         <ul>
           <li>
-            <button><img src="./img/origamid-logo.svg" alt="Origamid Logo"></button>
+            <button class="origamid"><img src="./img/origamid-logo.svg" alt="Origamid Logo"></button>
           </li>
           <li>
-            <button><img src="./img/ebac-logo.svg" alt="Ebac Logo"></button>
+            <button class="ebac"><img src="./img/ebac-logo.svg" alt="Ebac Logo"></button>
           </li>
           <li>
-            <button><img src="./img/udemy-logo.svg" alt="Udemy Logo"></button>
+            <button class="udemy"><img src="./img/udemy-logo.svg" alt="Udemy Logo"></button>
           </li>
         </ul>
 
@@ -322,8 +336,59 @@
     </div>
   </footer>
 
+  <div class="modal-overlay modal-hidden">
+
+    <div class="modal-certificate origamid item-modal-hidden">
+      <div class="item origamid">
+        <div class="close-modal">
+          <button><img src="./img/close-i.svg" alt="Close icon"></button>
+        </div>
+
+        <div class="certificate-img">
+          <a href="#"><img src="./img/certificate-one.png" alt="Certificado Udemy"></a>
+        </div>
+
+        <a class="view-pdf-btn" href="#">VER PDF</a>
+
+      </div>
+    </div>
+
+    <div class="modal-certificate ebac item-modal-hidden">
+      <div class="item ebac">
+        <div class="close-modal">
+          <button><img src="./img/close-i.svg" alt="Close icon"></button>
+        </div>
+
+
+        <div class="certificate-img">
+          <a href="#"><img src="./img/certificado ebac.svg" alt="Certificado Ebac"></a>
+        </div>
+
+        <a class="view-pdf-btn" href="#">VER PDF</a>
+
+      </div>
+    </div>
+
+    <div class="modal-certificate udemy item-modal-hidden">
+      <div class="item udemy">
+        <div class="close-modal">
+          <button><img src="./img/close-i.svg" alt="Close icon"></button>
+        </div>
+
+        <div class="certificate-img">
+          <a href="#"><img src="./img/udemy-certificate.png" alt="Certificado Udemy"></a>
+        </div>
+        <!-- <div class="view-pdf-btn"> -->
+        <a class="view-pdf-btn" href="#">VER PDF</a>
+        <!-- </div> -->
+      </div>
+    </div>
+
+  </div>
+
 
   <script src="js/script.js"></script>
+  <script src="js/certificates.js"></script>
 </body>
 
 </html>

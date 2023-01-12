@@ -13,6 +13,7 @@ header {
     @include flex(row, space-between, center);
     position: relative;
   }
+
   nav {
     @include flex(row, space-between, center);
     ul {
@@ -57,14 +58,55 @@ header {
         }
 
         &:last-child {
-          margin-right: 4rem;
+          margin-right: 2rem;
         }
       }
     }
 
     .header-btns {
       @include flex(row, space-between, center);
-      gap: 1.6rem;
+      gap: 2.6rem;
+      padding: 3rem 0;
+      img {
+        width: 2.3rem;
+      }
+    }
+    .cv-download {
+      @include flex(row, space-between, center);
+      gap: 1rem;
+
+      padding: 0.7rem 2rem;
+      border: 0.1rem solid $brand-color-purple;
+      border-radius: 50rem;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        background-color: $brand-color-purple;
+      }
+    }
+
+    .menu-mobile {
+      display: none;
+    }
+  }
+
+  // RESPONSIVE
+  @include responsive(820px) {
+    nav {
+      ul {
+        display: none;
+      }
+      .menu-mobile {
+        display: block;
+      }
+
+      .cv-download {
+        display: none;
+      }
+    }
+
+    .lang-dropdown {
+      right: 9.2rem;
     }
   }
 }

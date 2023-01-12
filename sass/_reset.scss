@@ -16,6 +16,9 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  @include responsive(430px) {
+    font-size: 55%;
+  }
 }
 
 img {

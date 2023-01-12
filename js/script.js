@@ -1,20 +1,21 @@
+// Light and dark mode
 const body = document.querySelector("body");
+const modeBtn = document.querySelector("#light-mode");
+let imgMode = document.querySelector("#img-mode");
+
+modeBtn.addEventListener("click", function () {
+  body.classList.toggle("light-mode");
+  if (imgMode.src === "http://127.0.0.1:5500/img/sun-i.svg") {
+    imgMode.src = "./img/moon-on-i.svg";
+  } else if (imgMode.src === "http://127.0.0.1:5500/img/moon-on-i.svg") {
+    imgMode.src = "./img/sun-i.svg";
+  }
+});
+
+// Language dropdown
 const languageBtn = document.querySelector("#language-btn");
 const languageContainer = document.querySelector(".lang-dropdown");
-// const headerContainer = document.querySelector("header");
 
 languageBtn.addEventListener("click", function () {
   languageContainer.classList.toggle("visible");
 });
-
-// light and dark mode
-const btnLightMode = document.querySelector("#light-mode");
-
-btnLightMode.addEventListener("click", function () {
-  body.classList.toggle("light-mode");
-});
-
-const heroContainer = document.querySelector(".s-hero .text");
-const h2El = document.querySelector(".s-hero .text h1").textContent;
-
-console.log(heroContainerH2.textContent);

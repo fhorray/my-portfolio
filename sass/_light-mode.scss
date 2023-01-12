@@ -32,6 +32,24 @@ body {
             }
           }
         }
+
+        .header-btns {
+          .cv-download {
+            a {
+              color: $brand-color-black-light;
+            }
+            img {
+              filter: brightness(25%);
+            }
+
+            &:hover a {
+              color: $brand-color-bg-light;
+            }
+            &:hover img {
+              filter: brightness(100%);
+            }
+          }
+        }
       }
 
       #logo {
@@ -75,6 +93,10 @@ body {
         li {
           filter: brightness(25%);
         }
+      }
+
+      .arrow-down {
+        filter: brightness(25%);
       }
     }
 
