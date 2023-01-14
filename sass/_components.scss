@@ -129,6 +129,11 @@
         font-weight: 600;
         color: $brand-color-purple;
       }
+
+      &:last-child:hover {
+        color: rgba(black, 0.3);
+        font-weight: initial;
+      }
     }
   }
   &::before {
@@ -157,7 +162,6 @@
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
-
 }
 
 .visible {

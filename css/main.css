@@ -295,6 +295,9 @@ h2 {
       .lang-dropdown .languages button:hover {
         font-weight: 600;
         color: #9245f5; }
+      .lang-dropdown .languages button:last-child:hover {
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: initial; }
   .lang-dropdown::before {
     content: "";
     width: 1.5rem;
@@ -479,6 +482,9 @@ header {
       display: none; }
     header .lang-dropdown {
       right: 9.2rem; } }
+  @media screen and (max-width: 430px) {
+    header .lang-dropdown:before {
+      top: -38px; } }
 
 .s-hero {
   padding-top: 10.7rem;

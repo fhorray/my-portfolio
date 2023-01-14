@@ -109,4 +109,11 @@ header {
       right: 9.2rem;
     }
   }
+  @include responsive(430px) {
+    .lang-dropdown {
+      &:before {
+        top: -38px;
+      }
+    }
+  }
 }
