@@ -7,7 +7,7 @@ modeBtn.addEventListener("click", function () {
   body.classList.toggle("light-mode");
   if (imgMode.src === "https://fsantos.vercel.app/img/sun-i.svg") {
     imgMode.src = "https://fsantos.vercel.app/img/moon-on-i.svg";
-  } else if (imgMode.src === "https://fsantos.vercel.app//img/moon-on-i.svg") {
+  } else if (imgMode.src === "https://fsantos.vercel.app/img/moon-on-i.svg") {
     imgMode.src = "https://fsantos.vercel.app/img/sun-i.svg";
   }
 });
