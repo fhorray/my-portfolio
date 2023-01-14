@@ -477,7 +477,7 @@ header {
     header nav ul {
       display: none; }
     header nav .menu-mobile {
-      display: block; }
+      display: none; }
     header nav .cv-download {
       display: none; }
     header .lang-dropdown {
