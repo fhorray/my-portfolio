@@ -636,4 +636,10 @@ footer {
       }
     }
   }
+
+  @include responsive(500px) {
+    .email {
+      font-size: 3rem;
+    }
+  }
 }

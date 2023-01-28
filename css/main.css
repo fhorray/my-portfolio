@@ -991,6 +991,9 @@ footer {
         text-align: center; }
         footer .copy a {
           display: block; } }
+  @media screen and (max-width: 500px) {
+    footer .email {
+      font-size: 3rem; } }
 
 body {
   transition: all 0.3s ease-in; }
