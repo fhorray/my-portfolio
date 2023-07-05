@@ -1,11 +1,11 @@
 import React from "react";
 
-// IMAGES
-import Logo from "../../assets/images/fsantos-logo.svg";
-import DownloadIcon from "../../assets/images/download-i.svg";
-import Language from "../../assets/images/globe-i.svg";
-import Mode from "../../assets/images/sun-i.svg";
-import MenuMobile from "../../assets/images/menu-mobile.svg";
+// ICONS
+import Logo from "../../assets/images/brand/fsantos-logo.svg";
+import DownloadIcon from "../../assets/images/icons/download-i.svg";
+import Language from "../../assets/images/icons/globe-i.svg";
+import Mode from "../../assets/images/icons/sun-i.svg";
+import MenuMobile from "../../assets/images/icons/menu-mobile-i.svg";
 
 // LANGUAGE
 import { useTranslation } from "react-i18next";
@@ -61,18 +61,6 @@ const Header = () => {
             />
           </div>
         </nav>
-
-        {/* LANGUAGE DROPDOWN */}
-        {/* <div className="lang-dropdown">
-          <div className="languages">
-            <button className="active-lang" type="button">
-              Portugês (Brazil)
-            </button>
-            <button type="button" disabled>
-              English
-            </button>
-          </div>
-        </div> */}
       </div>
     </header>
   );

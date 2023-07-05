@@ -6,10 +6,14 @@
 @import "titles";
 @import "components";
 @import "buttons";
-@import "../components/Header/Header.scss";
-// @import "home";
 @import "light-mode";
 @import "bio";
 
 // SECTIONS
+@import "../components/Header/Header.scss";
 @import "../components/Hero/Hero.scss";
+@import "../components/Skills/Skills.scss";
+@import "../components/About/About.scss";
+@import "../components/Projects/Projects.scss";
+@import "../components/Certificates/Certificates.scss";
+@import "../components/Footer/Footer.scss";

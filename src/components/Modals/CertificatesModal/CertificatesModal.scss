@@ -1,0 +1,73 @@
+// CERTIFICATES MODAL
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background: rgba(black, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 1s ease-in;
+
+  .modal-certificate {
+    z-index: 19999;
+    width: 100%;
+    max-width: 70rem;
+    height: 50rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -65%);
+
+    .close-modal {
+      width: 4rem;
+      height: 4rem;
+      background-color: $brand-color-light;
+      @include flex(column, center, center);
+      position: absolute;
+      right: -10px;
+      top: -16px;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .item {
+      left: 0;
+      .certificate-img {
+        img {
+          border-top-left-radius: 2rem;
+          border-top-right-radius: 2rem;
+        }
+      }
+
+      .view-pdf-btn {
+        text-align: center;
+        background-color: $brand-color-purple;
+        padding: 2.5rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        font-weight: 400;
+        font-size: 2rem;
+        padding: 2.5rem 2rem;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.modal-hidden {
+  display: none;
+  transition: all 1s ease-in;
+  opacity: 0;
+}
+
+.item-modal-hidden {
+  display: none;
+}

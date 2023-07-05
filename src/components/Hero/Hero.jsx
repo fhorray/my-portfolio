@@ -1,10 +1,10 @@
 import React from "react";
 
 // IMAGES
-import GithubIcon from "../../assets/images/github-i.svg";
-import LinkedinIcon from "../../assets/images/linkedin-i.svg";
-import InstagramIcon from "../../assets/images/instagram-i.svg";
-import BehanceIcon from "../../assets/images/behance-i.svg";
+import GithubIcon from "../../assets/images/icons/github-i.svg";
+import LinkedinIcon from "../../assets/images/icons/linkedin-i.svg";
+import InstagramIcon from "../../assets/images/icons/instagram-i.svg";
+import BehanceIcon from "../../assets/images/icons/behance-i.svg";
 import MyPicture from "../../assets/images/hero-img-2.png";
 import { useTranslation } from "react-i18next";
 
@@ -71,7 +71,7 @@ const Hero = () => {
             <span className="interm">|</span>
           </h2>
         </div>
-        <img className="hero-img" src={"MyPicture"} alt="Francy Santos" />
+        <img className="hero-img" src={MyPicture} alt="Francy Santos" />
       </div>
     </section>
   );
