@@ -1,5 +1,8 @@
 import React from "react";
 
+// HOOKS
+import { useTranslation } from "react-i18next";
+
 // IMAGES
 import GithubIcon from "../../assets/images/icons/github-i.svg";
 import LinkedinIcon from "../../assets/images/icons/linkedin-i.svg";
@@ -10,26 +13,28 @@ import MyPicture from "../../assets/images/hero-img-3.png";
 import RectangleEye from "../../assets/images/rectangle-eye.svg";
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="s-hero">
       <div className="container">
         <span className="detail dt1">{"<FRONT-END />"}</span>
         <span className="detail dt2">{"<HTML />"}</span>
-        <span className="detail dt3">CSS {"{}...}"}</span>
+        <span className="detail dt3">CSS {"{...}"}</span>
 
         {/* TEXT AND IMAGE AREA */}
         <div className="text-image">
           <div className="text">
             <h2>
-              Olá, eu sou <span>{"{"}</span>
+              {t("Olá, eu sou")} <span>{"{"}</span>
             </h2>
-            <h1>Francy Santos</h1>
+            <h1>{t("Francy Santos")}</h1>
             <p>
-              <strong>UI Designer</strong> e{" "}
-              <strong>Desenvolvedor Front-End</strong> com habilidades em{" "}
-              <strong>React.js</strong>, <strong>CSS</strong> e{" "}
-              <strong>JavaScript</strong>, experiente em criar interfaces
-              atraentes e funcionais.
+              <strong>{t("UI Designer")}</strong> e{" "}
+              <strong>{t("Desenvolvedor Front-End")}</strong>{" "}
+              {t("com habilidades em")} <strong>{t("React.js" + ", ")}</strong>
+              <strong>{t("CSS")}</strong> {t("e")}{" "}
+              <strong>{t("JavaScript") + ", "}</strong>
+              {t("experiente em criar interfaces atraentes e funcionais.")}
             </p>
 
             {/* Social Medias */}
