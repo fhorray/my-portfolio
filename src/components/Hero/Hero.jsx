@@ -27,9 +27,9 @@ const Hero = () => {
             <p>
               <strong>UI Designer</strong> e{" "}
               <strong>Desenvolvedor Front-End</strong> com habilidades em{" "}
-              <strong>HTML</strong>, <strong>CSS</strong> e{" "}
-              <strong>JavaScript</strong>, experiente em criar interfaces de
-              usuário atraentes e funcionais.
+              <strong>React.js</strong>, <strong>CSS</strong> e{" "}
+              <strong>JavaScript</strong>, experiente em criar interfaces
+              atraentes e funcionais.
             </p>
 
             {/* Social Medias */}

@@ -77,6 +77,7 @@
         max-width: 100rem;
         z-index: 0;
         background-color: transparent;
+        pointer-events: none;
       }
       .rectangle-eye {
         position: absolute;
@@ -100,6 +101,27 @@
   .dt3 {
     bottom: -14.6rem;
     opacity: 0.05;
+  }
+
+  .arrow-down {
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    img:nth-child(1) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.3s;
+      animation-fill-mode: backwards;
+    }
+    img:nth-child(2) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.6s;
+      animation-fill-mode: backwards;
+    }
+    img:nth-child(3) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.9s;
+      animation-fill-mode: backwards;
+    }
   }
 
   &::before,
