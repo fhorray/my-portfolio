@@ -1,0 +1,75 @@
+.s-about {
+  color: $brand-color-light;
+  padding-top: 6rem;
+
+  .container {
+    position: relative;
+  }
+  .text {
+    p {
+      width: 100%;
+      max-width: 58.8rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+      padding-left: 5.3rem;
+    }
+  }
+
+  a {
+    color: $brand-color-purple-light;
+    font-size: 2rem;
+  }
+
+  .dt-sobre {
+    position: absolute;
+    bottom: 10rem;
+    right: -2rem;
+    opacity: 0.15;
+  }
+
+  @include sectionBefore;
+
+  @include responsive(700px) {
+    .text {
+      width: 90%;
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+    .dt-sobre {
+      top: -8rem;
+    }
+  }
+  @include responsive(500px) {
+    .text {
+      p {
+        padding-left: 1.3rem;
+      }
+    }
+  }
+  @include responsive(600px) {
+    .text {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+  @include responsive(700px) {
+    .text {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+    .dt-sobre {
+      top: -13rem;
+      font-size: 14rem;
+      left: 19.2px;
+    }
+  }
+}

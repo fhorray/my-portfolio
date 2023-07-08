@@ -1,0 +1,254 @@
+.s-hero {
+  width: 100vw;
+  height: 100rem;
+  padding-top: 32rem;
+  color: $brand-color-light;
+  position: relative;
+  margin-bottom: 7rem;
+  background-image: url("../../assets/images/hero-img-3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .container {
+    @include flex(column, space-between, center);
+    gap: 7rem;
+  }
+  .text-image {
+    width: 100%;
+    @include flex(row, space-between, center);
+    position: relative;
+    .text {
+      width: 100%;
+      max-width: 57.8rem;
+      z-index: 10;
+      filter: drop-shadow(5px 3px 15px 20px #08070c);
+
+      h2 {
+        font-weight: 400;
+        font-size: 3.5rem;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        color: $brand-color-light;
+        margin-bottom: 1.8rem;
+        span {
+          font-weight: 400;
+          font-size: 3.5rem;
+          line-height: 120%;
+          letter-spacing: -0.02em;
+          color: $brand-color-purple;
+        }
+        .interm {
+          font-weight: 300;
+          font-size: 5.8rem;
+          line-height: 140%;
+          letter-spacing: -0.02em;
+          position: relative;
+          top: 0.8rem;
+          color: $brand-color-light;
+          animation: intermAnimation 0.9s infinite ease-in-out;
+        }
+      }
+      h1,
+      p,
+      ul {
+        padding-left: 5.3rem;
+        margin-bottom: 1.8rem;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: 6rem;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        color: $brand-color-purple;
+      }
+
+      ul {
+        @include flex(row, start, center);
+        gap: 3.5rem;
+      }
+    }
+    .image-box {
+      position: absolute;
+      right: -29rem;
+      top: -45rem;
+      .hero-img {
+        width: 100%;
+        max-width: 100rem;
+        z-index: 0;
+        background-color: transparent;
+        pointer-events: none;
+      }
+      .rectangle-eye {
+        position: absolute;
+        right: 34.2rem;
+        top: 28rem;
+        mix-blend-mode: color;
+        background-color: $brand-color-purple;
+      }
+    }
+  }
+
+  .dt1 {
+    top: 6.8rem;
+    opacity: 0.15;
+  }
+  .dt2 {
+    top: 30.8rem;
+    z-index: 3;
+    opacity: 0.1;
+  }
+  .dt3 {
+    bottom: -14.6rem;
+    opacity: 0.05;
+  }
+
+  .arrow-down {
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    img:nth-child(1) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.3s;
+      animation-fill-mode: backwards;
+    }
+    img:nth-child(2) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.6s;
+      animation-fill-mode: backwards;
+    }
+    img:nth-child(3) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.9s;
+      animation-fill-mode: backwards;
+    }
+  }
+
+  &::before,
+  &::after {
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -3.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    right: 42px;
+    z-index: 3000;
+    animation: baladTwo 0.2s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+
+  &::after {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    left: 27rem;
+    z-index: 3000;
+    animation: baladTwo 3s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+
+  @include responsive(970px) {
+    .text {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+  @include responsive(900px) {
+    .text {
+      h1 {
+        font-size: 4.5rem;
+      }
+    }
+  }
+  @include responsive(865px) {
+    margin-bottom: 0;
+    .container {
+      flex-direction: column;
+      gap: 0;
+    }
+    .text {
+      h1 {
+        font-size: 6rem;
+      }
+
+      h2 {
+        .interm {
+          font-size: 4.8rem;
+        }
+      }
+    }
+
+    .hero-img {
+      position: relative;
+      top: -7rem;
+    }
+  }
+  @include responsive(500px) {
+    .text {
+      h1 {
+        font-size: 5.6rem;
+        padding-left: 1.3rem;
+      }
+      p {
+        padding-left: 1.3rem;
+      }
+    }
+  }
+  @include responsive(430px) {
+    .text {
+      h1 {
+        font-size: 5.3rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+      h2 {
+        .interm {
+          font-size: 4rem;
+          top: 0.5rem;
+        }
+      }
+    }
+
+    .hero-img {
+      max-width: 34rem;
+      top: -4rem;
+      margin-bottom: 1rem;
+    }
+
+    .dt1 {
+      font-size: 5.5rem;
+      top: 7rem;
+      opacity: 0.1;
+    }
+    .dt2 {
+      font-size: 5.5rem;
+      top: 20rem;
+      opacity: 0.1;
+      right: 0;
+    }
+    .dt3 {
+      font-size: 5.5rem;
+      top: 35rem;
+      opacity: 0.1;
+      right: 0;
+    }
+  }
+}

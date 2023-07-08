@@ -1,14 +1,29 @@
 {
-  "name": "dropim",
-  "version": "1.0.0",
-  "description": "Plataforma de  dropshipping 100% nacional",
-  "main": "index.js",
+  "name": "my-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "sass": "node-sass sass/main.scss css/main.css -w"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "author": "Francy Santos",
-  "license": "ISC",
+  "dependencies": {
+    "i18next": "^23.2.8",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.63.6"
+  },
   "devDependencies": {
-    "node-sass": "^8.0.0"
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "vite": "^4.3.9"
   }
 }

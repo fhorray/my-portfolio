@@ -1,0 +1,49 @@
+.s-skills {
+  .container {
+    @include flex(column, center, center);
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light;
+    margin-bottom: 5rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      color: $brand-color-purple;
+      opacity: 1;
+      font-family: "Sora";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: "/>";
+    }
+  }
+
+  ul {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+
+    gap: 5.5rem;
+    margin-bottom: 4rem;
+    li {
+      cursor: pointer;
+      @include baladAnimation;
+    }
+  }
+}
