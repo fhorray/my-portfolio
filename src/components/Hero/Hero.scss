@@ -1,70 +1,91 @@
 .s-hero {
-  padding-top: 10.7rem;
+  width: 100vw;
+  height: 100rem;
+  padding-top: 32rem;
   color: $brand-color-light;
   position: relative;
   margin-bottom: 7rem;
+  background-image: url("../../assets/images/hero-img-3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 
   .container {
-    @include flex(row, space-between, center);
+    @include flex(column, space-between, center);
     gap: 7rem;
   }
-
-  .text {
+  .text-image {
     width: 100%;
-    max-width: 57.8rem;
-    z-index: 10;
+    @include flex(row, space-between, center);
+    position: relative;
+    .text {
+      width: 100%;
+      max-width: 57.8rem;
+      z-index: 10;
+      filter: drop-shadow(5px 3px 15px 20px #08070c);
 
-    h2 {
-      font-weight: 400;
-      font-size: 3.5rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: $brand-color-light;
-      margin-bottom: 1.8rem;
-      span {
+      h2 {
         font-weight: 400;
         font-size: 3.5rem;
         line-height: 120%;
         letter-spacing: -0.02em;
+        color: $brand-color-light;
+        margin-bottom: 1.8rem;
+        span {
+          font-weight: 400;
+          font-size: 3.5rem;
+          line-height: 120%;
+          letter-spacing: -0.02em;
+          color: $brand-color-purple;
+        }
+        .interm {
+          font-weight: 300;
+          font-size: 5.8rem;
+          line-height: 140%;
+          letter-spacing: -0.02em;
+          position: relative;
+          top: 0.8rem;
+          color: $brand-color-light;
+          animation: intermAnimation 0.9s infinite ease-in-out;
+        }
+      }
+      h1,
+      p,
+      ul {
+        padding-left: 5.3rem;
+        margin-bottom: 1.8rem;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: 6rem;
+        line-height: 120%;
+        letter-spacing: -0.02em;
         color: $brand-color-purple;
       }
-      .interm {
-        font-weight: 300;
-        font-size: 5.8rem;
-        line-height: 140%;
-        letter-spacing: -0.02em;
-        position: relative;
-        top: 0.8rem;
-        color: $brand-color-light;
-        animation: intermAnimation 0.9s infinite ease-in-out;
+
+      ul {
+        @include flex(row, start, center);
+        gap: 3.5rem;
       }
     }
-    h1,
-    p,
-    ul {
-      padding-left: 5.3rem;
-      margin-bottom: 1.8rem;
+    .image-box {
+      position: absolute;
+      right: -29rem;
+      top: -45rem;
+      .hero-img {
+        width: 100%;
+        max-width: 100rem;
+        z-index: 0;
+        background-color: transparent;
+      }
+      .rectangle-eye {
+        position: absolute;
+        right: 34.2rem;
+        top: 28rem;
+        mix-blend-mode: color;
+        background-color: $brand-color-purple;
+      }
     }
-
-    h1 {
-      font-weight: 600;
-      font-size: 6rem;
-      line-height: 120%;
-      letter-spacing: -0.02em;
-      color: $brand-color-purple;
-    }
-
-    ul {
-      @include flex(row, start, center);
-      gap: 3.5rem;
-    }
-  }
-
-  .hero-img {
-    width: 100%;
-    max-width: 40rem;
-    z-index: 2;
-    background-color: transparent;
   }
 
   .dt1 {

@@ -9,11 +9,10 @@ import FigmaIcon from "../../assets/images/icons/figma-i.svg";
 import XDIcon from "../../assets/images/icons/xd-i.svg";
 import PhotoshopIcon from "../../assets/images/icons/photoshop-i.svg";
 import IllustratorIcon from "../../assets/images/icons/photoshop-i.svg";
-import ArrowDown from "../../assets/images/icons/arrow-down-i.svg";
 
 const Skills = () => {
   return (
-    <section className="s-skills">
+    <section id="skills" className="s-skills">
       <div className="container">
         <h2>Tecnologias</h2>
         <ul>
@@ -58,14 +57,6 @@ const Skills = () => {
             />
           </li>
         </ul>
-
-        <a href="#about">
-          <div className="arrow-down">
-            <img src={ArrowDown} alt="Arrow Down Icon" />
-            <img src={ArrowDown} alt="Arrow Down Icon" />
-            <img src={ArrowDown} alt="Arrow Down Icon" />
-          </div>
-        </a>
       </div>
     </section>
   );

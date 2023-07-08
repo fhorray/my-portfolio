@@ -7,11 +7,7 @@ import Language from "../../assets/images/icons/globe-i.svg";
 import Mode from "../../assets/images/icons/sun-i.svg";
 import MenuMobile from "../../assets/images/icons/menu-mobile-i.svg";
 
-// LANGUAGE
-import { useTranslation } from "react-i18next";
-
 const Header = () => {
-  const { t } = useTranslation();
   return (
     <header>
       <div className="container">
@@ -22,16 +18,16 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <a href="#about">{t("Sobre")}</a>
+              <a href="#about">Sobre</a>
             </li>
             <li>
-              <a href="#projects">{t("Projetos")}</a>
+              <a href="#projects">Projetos</a>
             </li>
             <li>
-              <a href="#certificates">{t("Certificados")}</a>
+              <a href="#certificates">Certificados</a>
             </li>
             <li>
-              <a href="#experience">{t("Experiência")}</a>
+              <a href="#experience">Experiência</a>
             </li>
           </ul>
           <div className="header-btns">
@@ -42,7 +38,7 @@ const Header = () => {
                 }
                 download="Francy CV"
               >
-                {t("Baixar CV")}
+                Baixar CV
               </a>
               <img src={DownloadIcon} alt="Download Icon" />
             </button>
