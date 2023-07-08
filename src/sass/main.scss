@@ -11,6 +11,9 @@
 
 // SECTIONS
 @import "../components/Header/Header.scss";
+// ### Language Seleciton
+@import "../components/Header/LanguageSelector/LanguageSelector.scss";
+
 @import "../components/Hero/Hero.scss";
 @import "../components/Skills/Skills.scss";
 @import "../components/About/About.scss";

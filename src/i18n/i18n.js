@@ -11,7 +11,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: navigator.language,
+  lng: "pt",
   fallbackLng: "en", // Idioma de fallback
   interpolation: {
     escapeValue: false,

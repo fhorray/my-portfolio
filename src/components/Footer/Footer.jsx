@@ -5,13 +5,15 @@ import GithubIcon from "../../assets/images/icons/github-i.svg";
 import LinkedinIcon from "../../assets/images/icons/linkedin-i.svg";
 import InstagramIcon from "../../assets/images/icons/instagram-i.svg";
 import BehanceIcon from "../../assets/images/icons/behance-i.svg";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="container">
-        <h2>Eai, vamos trabalhar juntos?</h2>
-        <span className="city">São Paulo, SP, Brasil</span>
+        <h2>{t("Eai, vamos trabalhar juntos?")}</h2>
+        <span className="city">{t("São Paulo, SP, Brasil")}</span>
         <a className="email" href="mailto:francy.horray@gmail.com">
           contato@fsantos.tech
         </a>
@@ -46,7 +48,8 @@ const Footer = () => {
         </ul>
 
         <p className="copy">
-          &copy; 2023 Todos os direitos reservados por{" "}
+          &copy; {t("2023 Todos os direitos reservados por")}
+          {""}
           <a href="https://www.linkedin.com/in/francysantos/"> Francy Santos</a>
         </p>
       </div>

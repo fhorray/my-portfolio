@@ -1,19 +1,22 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import Language from "../../../assets/images/icons/globe-i.svg";
 
 const LanguageSelector = () => {
-  const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
+  const { i18n } = useTranslation();
+
+  const currentLanguage = i18n.language;
+
+  const handleChangeLanguage = () => {
+    const newLanguage = currentLanguage === "pt" ? "en" : "pt";
+    i18n.changeLanguage(newLanguage);
   };
 
   return (
-    <select
-      className="select-language"
-      value={"language"}
-      onChange={handleLanguageChange}
-    >
-      <option value="en">English</option>
-      <option value="pt">Português</option>
-    </select>
+    <div className="language-selection" onClick={handleChangeLanguage}>
+      <img src={Language} alt="Language Icon" />
+      <span>{currentLanguage.toUpperCase()}</span>
+    </div>
   );
 };
 

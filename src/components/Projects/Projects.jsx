@@ -13,16 +13,18 @@ import ArrowDown from "../../assets/images/icons/arrow-down-i.svg";
 
 // PROJECTS IMAGES
 import Project1 from "../../assets/images/projects/psicorafa-project.png";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
   return (
     <section id="projects" className="s-projects">
       <div className="container">
-        <span className="detail dt-projects">Projetos</span>
+        <span className="detail dt-projects">{t("Projetos")}</span>
 
         <div className="projects">
           <h2>
-            <span>const</span> meusProjetos = <span>{"{"}</span>
+            <span>const</span> {t("meusProjetos")} = <span>{"{"}</span>
           </h2>
 
           <div className="items-container">

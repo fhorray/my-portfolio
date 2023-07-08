@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
+import React, { Suspense } from "react";
 
 // HOOKS
+import { I18nextProvider } from "react-i18next";
 import { useTranslation } from "react-i18next";
 
 // ICONS
 import Logo from "../../assets/images/brand/fsantos-logo.svg";
 import DownloadIcon from "../../assets/images/icons/download-i.svg";
-import Language from "../../assets/images/icons/globe-i.svg";
+
 import Mode from "../../assets/images/icons/sun-i.svg";
 import MenuMobile from "../../assets/images/icons/menu-mobile-i.svg";
 import LanguageSelector from "./LanguageSelector/LanguageSelector";
@@ -15,58 +16,57 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header>
-      <div className="container">
-        <a href="https://fsantos.vercel.app/">
-          <img id="logo" src={Logo} />
-        </a>
+    <Suspense fallback={<div>Loading...</div>}>
+      <header>
+        <div className="container">
+          <a href="https://fsantos.vercel.app/">
+            <img id="logo" src={Logo} />
+          </a>
 
-        <nav>
-          <ul>
-            <li>
-              <a href="#about">{t("Sobre")}</a>
-            </li>
-            <li>
-              <a href="#projects">{t("Projetos")}</a>
-            </li>
-            <li>
-              <a href="#certificates">{t("Certificados")}</a>
-            </li>
-            <li>
-              <a href="#experience">{t("Experiências")}</a>
-            </li>
-          </ul>
-          <div className="header-btns">
-            <button className="cv-download" type="button">
-              <a
-                href={
-                  "../../public/archives/(PT-BR) Francyelton Santos Nobre - CV.pdf"
-                }
-                download="Francy CV"
-              >
-                {t("Download CV")}
-              </a>
-              <img src={DownloadIcon} alt="Download Icon" />
-            </button>
+          <nav>
+            <ul>
+              <li>
+                <a href="#about">{t("Sobre")}</a>
+              </li>
+              <li>
+                <a href="#projects">{t("Projetos")}</a>
+              </li>
+              <li>
+                <a href="#certificates">{t("Certificados")}</a>
+              </li>
+              <li>
+                <a href="#experience">{t("Experiências")}</a>
+              </li>
+            </ul>
+            <div className="header-btns">
+              <button className="cv-download" type="button">
+                <a
+                  href={
+                    "../../public/archives/(PT-BR) Francyelton Santos Nobre - CV.pdf"
+                  }
+                  download="Francy CV"
+                >
+                  {t("Download CV")}
+                </a>
+                <img src={DownloadIcon} alt="Download Icon" />
+              </button>
 
-            <button id="language-btn" onClick={() => handleChangeLanguage()}>
-              {/* <img src={Language} alt="language" /> */}
               <LanguageSelector />
-            </button>
 
-            <button id="light-mode">
-              <img id="img-mode" src={Mode} alt="Dark Button" />
-            </button>
+              <button id="light-mode">
+                <img id="img-mode" src={Mode} alt="Dark Button" />
+              </button>
 
-            <img
-              src={MenuMobile}
-              alt="Menu Mobile Icon"
-              className="menu-mobile"
-            />
-          </div>
-        </nav>
-      </div>
-    </header>
+              <img
+                src={MenuMobile}
+                alt="Menu Mobile Icon"
+                className="menu-mobile"
+              />
+            </div>
+          </nav>
+        </div>
+      </header>
+    </Suspense>
   );
 };
 

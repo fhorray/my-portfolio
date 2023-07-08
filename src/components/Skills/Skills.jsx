@@ -11,12 +11,15 @@ import FigmaIcon from "../../assets/images/icons/figma-i.svg";
 import XDIcon from "../../assets/images/icons/xd-i.svg";
 import PhotoshopIcon from "../../assets/images/icons/photoshop-i.svg";
 import IllustratorIcon from "../../assets/images/icons/illustrator-i.svg";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="skills" className="s-skills">
       <div className="container">
-        <h2>Tecnologias</h2>
+        <h2>{t("Tecnologias")}</h2>
         <ul>
           <li>
             <img className="baladAnimation" src={ReactIcon} alt="React Icon" />

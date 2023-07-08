@@ -1,0 +1,27 @@
+.language-selection {
+  width: 10rem;
+
+  background-color: $brand-color-purple;
+  @include flex(row, center, center);
+  gap: 1rem;
+  padding: 0.7rem 2rem;
+  border-radius: 100rem;
+  cursor: pointer;
+  user-select: none;
+  span {
+    width: 3rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+
+  transition: all 0.2s ease-in;
+  text-align: center;
+
+  option {
+    background-color: #fff;
+    color: $brand-color-bg;
+    &:checked {
+      background-color: $brand-color-purple;
+    }
+  }
+}

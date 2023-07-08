@@ -3,7 +3,7 @@
     "Sobre": "Sobre",
     "Projetos": "Projetos",
     "Certificados": "Certificados",
-    "Experiência": "Experiência",
+    "Experiências": "Experiências",
     "Baixar CV": "Baixar CV",
     "Olá, eu sou": "Olá, eu sou",
     "Francy Santos": "Francy Santos",
@@ -15,6 +15,29 @@
     "HTML": "HTML",
     "CSS": "CSS",
     "JavaScript": "JavaScript",
-    "experiente em criar interfaces de usuário atraentes e funcionais.": "experiente em criar interfaces de usuário atraentes e funcionais."
+    "experiente em criar interfaces atraentes e funcionais.": "experiente em criar interfaces atraentes e funcionais.",
+
+    "Tecnologias": "Tecnologias",
+
+    "sobre-mim": "sobre-mim",
+    "Eu me chamo": "Eu me chamo",
+    "Francyelton": "Francyelton",
+    "(Francy rsrs)": "(Francy rsrs)",
+    "um desenvolvedor web freelancer com experiência em": "um desenvolvedor web freelancer com experiência em",
+    "UI Design": "UI Design",
+    "desenvolvimento Front-End": "desenvolvimento Front-End",
+    "Adoro criar interfaces responsivas e escrever códigos limpos e eficientes. Além disso, sou apaixonado por tecnologia, games e música.": "Adoro criar interfaces responsivas e escrever códigos limpos e eficientes. Além disso, sou apaixonado por tecnologia, games e música.",
+    "Entre em contato comigo pelo": " Entre em contato comigo pelo",
+    "ou por": " ou por",
+    "e-mail": " e-mail",
+    "para saber mais sobre meu trabalho.": " para saber mais sobre meu trabalho.",
+
+    "meusProjetos": "meusProjetos",
+
+    "meusCertificados": "meusCertificados",
+
+    "Eai, vamos trabalhar juntos?": "Eai, vamos trabalhar juntos?",
+    "São Paulo, SP, Brasil": "São Paulo, SP, Brasil",
+    "2023 Todos os direitos reservados por": "2023 Todos os direitos reservados por"
   }
 }

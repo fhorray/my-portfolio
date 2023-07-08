@@ -4,16 +4,19 @@ import React from "react";
 import Origamid from "../../assets/images/certificates/origamid-logo.svg";
 import Ebac from "../../assets/images/certificates/ebac-logo.svg";
 import Udemy from "../../assets/images/certificates/udemy-logo.svg";
+import { useTranslation } from "react-i18next";
 
 const Certificates = () => {
+  const { t } = useTranslation();
   return (
     <section id="certificates" className="s-certificates">
       <div className="container">
-        <span className="detail dt-certificates">Certificados</span>
+        <span className="detail dt-certificates">{t("Certificados")}</span>
 
         <div className="schools">
           <h2>
-            <span>const</span> meusCertificados = <span>[</span>
+            <span>const</span>
+            {t("meusCertificados")} = <span>[</span>
           </h2>
 
           <ul>
